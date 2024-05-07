@@ -13,25 +13,32 @@ driver.get(URL)
 # TODO: FIND 4 LATEST
 latest_button = driver.find_element(By.XPATH, "//yt-formatted-string[@title='Latest']")
 latest_button.click()
-latest_tracks = driver.find_elements(
+latest = driver.find_elements(
     By.XPATH, "//ytd-rich-grid-row/div[@id='contents']//a[@id='video-title-link']"
 )
 
-for track in latest_tracks[:5]:
-    print(track.text)
-    print(track.get_attribute("href"))
+latest_tracks = list()
+latest_tracks_links = list()
+for track in latest[:5]:
+    latest_tracks.append(track.text)
+    latest_tracks_links.append(track.get_attribute("href"))
+print(latest_tracks)
+print(latest_tracks_links)
 
 # TODO: FIND 4 POPULAR + LATEST
 popular_button = driver.find_element(
     By.XPATH, "//yt-formatted-string[@title='Popular']"
 )
 popular_button.click()
-popular_tracks = driver.find_elements(
+popular = driver.find_elements(
     By.XPATH, "//ytd-rich-grid-row/div[@id='contents']//a[@id='video-title-link']"
 )
 
-for track in popular_tracks[:5]:
-    print(track.text)
-    print(track.get_attribute("href"))
-
+popular_tracks = list()
+popular_tracks_links = list()
+for track in popular[:5]:
+    popular_tracks.append(track.text)
+    popular_tracks_links.append(track.get_attribute("href"))
+print(popular_tracks)
+print(popular_tracks_links)
 driver.quit()
