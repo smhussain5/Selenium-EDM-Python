@@ -19,6 +19,7 @@ latest_tracks = driver.find_elements(
 
 for track in latest_tracks[:5]:
     print(track.text)
+    print(track.get_attribute("href"))
 
 # TODO: FIND 4 POPULAR + LATEST
 popular_button = driver.find_element(
@@ -31,5 +32,6 @@ popular_tracks = driver.find_elements(
 
 for track in popular_tracks[:5]:
     print(track.text)
+    print(track.get_attribute("href"))
 
 driver.quit()
