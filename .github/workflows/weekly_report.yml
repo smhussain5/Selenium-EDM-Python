@@ -3,3 +3,11 @@ name: weekly-report
 on:
   schedule:
     - cron: "30 14 * * 3"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step-1
+        run: echo "Hello World!"

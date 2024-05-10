@@ -27,7 +27,7 @@ latest = driver.find_elements(
 latest_tracks = []
 latest_tracks_links = []
 
-for track in latest[:5]:
+for track in latest[:7]:
     latest_tracks.append(track.text)
     latest_tracks_links.append(track.get_attribute("href"))
 
@@ -44,7 +44,7 @@ popular = driver.find_elements(
 popular_tracks = []
 popular_tracks_links = []
 
-for track in popular[:5]:
+for track in popular[:3]:
     popular_tracks.append(track.text)
     popular_tracks_links.append(track.get_attribute("href"))
 
