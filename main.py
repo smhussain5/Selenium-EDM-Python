@@ -1,5 +1,9 @@
-import time
+"""
+Responsible for scraping data from YouTube.
+Information will be stored in arrays to be sent via GMail.
+"""
 
+import time
 from selenium import webdriver
 from selenium.webdriver import ChromeOptions
 from selenium.webdriver.common.by import By
@@ -12,7 +16,7 @@ driver_options.add_argument("--start-maximized")
 driver = webdriver.Chrome(options=driver_options)
 driver.get(URL)
 
-# TODO: FIND 4 LATEST
+# FIND 4 LATEST
 latest_button = driver.find_element(By.XPATH, "//yt-formatted-string[@title='Latest']")
 latest_button.click()
 time.sleep(1)
@@ -20,8 +24,8 @@ latest = driver.find_elements(
     By.XPATH, "//ytd-rich-grid-row/div[@id='contents']//a[@id='video-title-link']"
 )
 
-latest_tracks = list()
-latest_tracks_links = list()
+latest_tracks = []
+latest_tracks_links = []
 
 for track in latest[:5]:
     latest_tracks.append(track.text)
@@ -30,7 +34,7 @@ for track in latest[:5]:
 print(latest_tracks)
 print(latest_tracks_links)
 
-# TODO: FIND 4 POPULAR + LATEST
+# FIND 4 POPULAR + LATEST
 popular_button = driver.find_element(
     By.XPATH, "//yt-formatted-string[@title='Popular']"
 )
@@ -40,8 +44,8 @@ popular = driver.find_elements(
     By.XPATH, "//ytd-rich-grid-row/div[@id='contents']//a[@id='video-title-link']"
 )
 
-popular_tracks = list()
-popular_tracks_links = list()
+popular_tracks = []
+popular_tracks_links = []
 
 for track in popular[:5]:
     popular_tracks.append(track.text)

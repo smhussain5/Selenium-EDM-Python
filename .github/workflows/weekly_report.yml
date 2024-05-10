@@ -1,0 +1,5 @@
+name: weekly-report
+
+on:
+  schedule:
+    - cron: "30 14 * * 3"
