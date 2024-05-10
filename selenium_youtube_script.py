@@ -31,9 +31,6 @@ for track in latest[:5]:
     latest_tracks.append(track.text)
     latest_tracks_links.append(track.get_attribute("href"))
 
-print(latest_tracks)
-print(latest_tracks_links)
-
 # FIND 4 POPULAR + LATEST
 popular_button = driver.find_element(
     By.XPATH, "//yt-formatted-string[@title='Popular']"
@@ -51,6 +48,4 @@ for track in popular[:5]:
     popular_tracks.append(track.text)
     popular_tracks_links.append(track.get_attribute("href"))
 
-print(popular_tracks)
-print(popular_tracks_links)
 driver.quit()
