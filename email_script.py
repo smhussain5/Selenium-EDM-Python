@@ -7,15 +7,12 @@ import os
 import smtplib
 from datetime import date
 from email.message import EmailMessage
-from dotenv import load_dotenv
 from selenium_youtube_script import (
     latest_tracks,
     latest_tracks_links,
     popular_tracks,
     popular_tracks_links,
 )
-
-load_dotenv()
 
 GMAIL_ADDRESS = os.environ.get("GMAIL_ADDRESS")
 GMAIL_PASS = os.environ.get("GMAIL_PASS")
