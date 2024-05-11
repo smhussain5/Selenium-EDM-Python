@@ -35,7 +35,7 @@ message.add_alternative(
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body style="font-family: 'Roboto', sans-serif;">
     <h1 style="color: #C2185B;">UPDATE THAT PLAYLIST!</h1>
     <p style="color: #C2185B;">Here are the latest and greatest songs from Future House Music! 🙌</p>
     <h2 style="color: #7B1FA2;">✨ LATEST TRACKS ✨</h2>

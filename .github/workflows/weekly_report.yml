@@ -9,5 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: step-1
-        run: echo "Hello World!"
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - name: RUN SELENIUM EMAIL SCRIPT
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_PASS: ${{ secrets.GMAIL_PASS }}
+        run: python email_script.py
