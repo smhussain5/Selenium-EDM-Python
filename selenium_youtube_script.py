@@ -8,6 +8,7 @@ from selenium import webdriver
 from selenium.webdriver import ChromeOptions
 from selenium.webdriver.common.by import By
 
+# SET UP SELENIUM
 URL = "https://www.youtube.com/@FutureHouseMusic/videos"
 
 driver_options = ChromeOptions()
@@ -16,7 +17,7 @@ driver_options.add_argument("--start-maximized")
 driver = webdriver.Chrome(options=driver_options)
 driver.get(URL)
 
-# FIND 4 LATEST
+# FIND FIRST 7 LATEST TRACKS
 latest_button = driver.find_element(By.XPATH, "//yt-formatted-string[@title='Latest']")
 latest_button.click()
 time.sleep(1)
@@ -31,7 +32,7 @@ for track in latest[:7]:
     latest_tracks.append(track.text)
     latest_tracks_links.append(track.get_attribute("href"))
 
-# FIND 4 POPULAR + LATEST
+# FIND FIRST 3 POPULAR TRACKS
 popular_button = driver.find_element(
     By.XPATH, "//yt-formatted-string[@title='Popular']"
 )
@@ -48,4 +49,5 @@ for track in popular[:3]:
     popular_tracks.append(track.text)
     popular_tracks_links.append(track.get_attribute("href"))
 
+# EXIT SELENIUM
 driver.quit()
