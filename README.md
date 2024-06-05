@@ -1,6 +1,6 @@
 # EDM EMAIL DIGEST PYTHON
 
-<!--![DocFinder Python GIF Demonstration](https://github.com/smhussain5/HCP-Django-Python/blob/main/DOCFINDER_PYTHON.gif?raw=true)--->
+![EDM Email Digest Selenium Python PNG Demonstration](https://github.com/smhussain5/Selenium-EDM-Python/blob/main/SELENIUM_PYTHON.png?raw=true)
 
 ## Problem 🤔
 
