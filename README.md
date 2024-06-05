@@ -4,30 +4,23 @@
 
 ## Problem 🤔
 
-<!-- With ~1,000,000 active physicians available to treat ~330,000,000 Americans, patients can find it difficult to find healthcare that suits their specific needs. When a patient is finally referred to a specialist by their primary care physician, there may still be obstacles that could delay care (eg, specialist not taking new patients, not accepting medicare/medicaid). --->
+Taking a long walk outside with some good music is one of my favorite ways to relax, but I noticed that I only update my playlist every so often. I was thinking of how I could find new music on a regular basis. The answer? With Python, duh! 😉
 
 ## Solution 💡
 
-<!-- This full-stack application provides patients with an active database containing information on physicians in the US. Patients can search for physicians by city/name and view physicians in specific specialties (eg, cardiology, neurology, psychiatry, etc). Each card has a link that dynamically renders that physician's profile, which contains their biography, practice address, and city/state of operation. All pages, except for login/register, are locked to unauthenticated users (Feel free to login using the information below!).
-
-> **USERNAME**: test_member<br>
-> **PASSWORD**: Django2024!<br>
-
-For security, only users with specific permissions can add/delete/edit physicians to the database. Front-end utilizes Bootstrap5/Bootswatch themes. Back-end utilizes Django and PostgreSQL database provided by Heroku.
-
-**NOTE**: All names, addresses, phone numbers were collected using ChatGPT and fake address generators. Any resemblance to actual locales or persons, living or dead, is entirely coincidental. --->
+This application is powered by Selenium and GitHub Actions to deliver weekly music recommendations to my email. I used Selenium to open a headless Chrome webdriver and search Future House Music's YouTube page for their latest and most popular tracks. The resulting information would be stored an array and sent via email using smtplib and some HTML/CSS. To schedule those emails, I used GitHub Actions to run this script every week in the afternoon.
 
 ## Technologies Used ⚙
-<!--
-- Bootstrap
+
 - CSS3
-- Django
-- Django-Crispy-Forms
-- Heroku
+- EmailMessage (Library)
+- GitHub Actions
 - HTML5
 - PyCharm
 - Python
---->
+- Selenium
+- SMTP (Library)
+
 ## Challenges 💢
 
 <!--Originally, I wanted to add a "bookmark" feature so users can find their physicians of interest. From my research, it seems this would require knowledge of jQuery, which I have yet to learn. Deployment to Heroku was challenging to say the least. Migrating from SQLite to PostgreSQL produced errors due to mismatching of variable types. After some research on StackOverflow, I decided to delete the original SQLite database and migrate all models to the new PostgreSQL database and repopulate it via the front-end model forms and admin panel.--->
