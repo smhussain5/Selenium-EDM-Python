@@ -23,11 +23,11 @@ This application is powered by Selenium and GitHub Actions to deliver weekly mus
 
 ## Challenges 💢
 
-<!--Originally, I wanted to add a "bookmark" feature so users can find their physicians of interest. From my research, it seems this would require knowledge of jQuery, which I have yet to learn. Deployment to Heroku was challenging to say the least. Migrating from SQLite to PostgreSQL produced errors due to mismatching of variable types. After some research on StackOverflow, I decided to delete the original SQLite database and migrate all models to the new PostgreSQL database and repopulate it via the front-end model forms and admin panel.--->
+Having never used GitHub Actions before, I was worried my YML file would break during the build process...and it did! A LOT. But each failure and StackOverflow search was an opportunity to experiment and, after a few iterations and tweaks, the workflow managed to run successfully and continues to do so.
 
 ## Insights 💭
 
-<!--I enjoyed developing this feature-rich application and I really believe there's potential to add more features (eg, bookmarks, reviews, etc) and scale this further. If this were to use real, active physicians, I would consider a verification step via email and include their profile picture and NPI number in their profile page. Although the complexity of Django seems daunting initially, it becomes much easier after the steep learning curve.--->
+I enjoyed developing this project and I'm continually impressed by how much can be done with Selenium and Python. In the future, I would love to find a way to make a nicer looking HTML message without using inline CSS styling to give it that extra polish and flashy feel.
 
 ## Contact 📲
 
